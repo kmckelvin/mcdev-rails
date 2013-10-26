@@ -1,0 +1,21 @@
+en:
+  name: Kevin McKelvin
+  webname: kmckelvin
+  intro:
+    greeting: Hi, I'm Kevin McKelvin
+    blurb: I'm a software developer, gamer, speaker and open source contributor.
+      I work at platform45, developing gorgeous web applications with the best web developers in South Africa
+
+  blog:
+    title: Blog
+
+  date:
+    formats:
+      default: '%m/%d/%Y'
+      with_weekday: '%a %m/%d/%y'
+
+  time:
+    formats:
+      default: '%a, %b %-d, %Y at %r'
+      date: '%b %-d, %Y'
+      short: '%B %d'
