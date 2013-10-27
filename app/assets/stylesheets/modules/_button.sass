@@ -1,0 +1,36 @@
+%btn
+  +vertical-height(38px)
+  +simple-box-shadow
+  +transition(0.2s)
+  background: $color-highlight
+  border-radius: 5px
+  color: #FFF
+  cursor: pointer
+  display: inline-block
+  font-size: 1.125rem
+  font-weight: $font-bold
+  min-width: 140px
+  padding: 0 1.5rem
+  text-align: center
+  &:hover
+    background: lighten($color-highlight, 10%)
+  &:focus
+    +reset-focus
+
+.btn
+  @extend %btn
+
+.btn--cancel
+  @extend %btn
+  background-color: $color-ui-light
+  margin-left: 1rem
+  &:hover
+    background: lighten($color-ui-light, 10%)
+
+.btn--danger
+  @extend %btn
+  background-color: red
+  margin-left: 1rem
+  &:hover
+    background: lighten(red, 10%)
+

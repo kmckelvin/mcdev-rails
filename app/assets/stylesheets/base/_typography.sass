@@ -1,0 +1,85 @@
+// @group Base
+html
+  font: $base-font-size $base-font-stack
+  line-height: $base-line-height
+  -webkit-font-smoothing: antialiased
+
+#{$heading-tags},
+ul, ol, dd,
+p, figure,
+pre, table, fieldset, hr
+  margin-bottom: #{$base-line-height}rem
+
+a
+  +transition(color 0.1s linear)
+  text-decoration: none
+// end
+
+// @group Headings
+#{$heading-tags}
+  text-rendering: optimizeLegibility
+
+h1
+  font-size: 2.15rem
+
+h2
+  font-size: 2rem
+
+h3
+  font-size: 1.75rem
+
+h4
+  font-size: 1.5rem
+
+h5
+  font-size: 1.125rem
+  margin-bottom: 0
+
+h6
+  font-size: 1rem
+  margin-bottom: 0
+  text-transform: uppercase
+// @end
+
+// @group Lists
+dl
+  dt
+    font-weight: $font-bold
+
+ol,
+ul
+  list-style: none
+  li
+    padding-left: 2.4rem
+    position: relative
+    &:before
+      +border-box
+      content: '\25CF'
+      left: 0
+      position: absolute
+      text-align: center
+      width: 2.4rem
+    >
+      ol,
+      ul
+        margin-bottom: 0
+        li:before
+          left: 0
+
+ol
+  counter-reset: li-counter
+  li
+    &:before
+      content: counter(li-counter, decimal)'.'
+      counter-increment: li-counter
+      padding-right: 0.4rem
+      text-align: right
+// @end
+
+// @group Navigation lists
+nav
+  ul
+    +reset-list
+  a
+    text-decoration: none
+// @end

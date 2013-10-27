@@ -1,9 +1,12 @@
-.logo McDev
-nav
-  ul
-    li Home
-    li Blog
-    li Projects
-    li Speaking
-    li Contact
-
+header.main-header
+  .container
+    .main-header__logo
+      = link_to root_url do
+        .logo__name McDev
+    nav.main-header__nav
+      ul
+        li: a href="#" Home
+        li: a href="#blog" Blog
+        li: a href="#projects" Projects
+        li: a href="#speaking" Speaking
+        li Contact

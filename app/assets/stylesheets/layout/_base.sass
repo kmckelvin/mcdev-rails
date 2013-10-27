@@ -1,0 +1,50 @@
+$logo-height: 50px
+$logo-width: 140px
+$logo-spacing: ($root-header-height - $logo-height) / 2
+
+.#{$root-header}
+  position: relative
+  height: $root-header-height
+  z-index: $header-zindex
+
+.#{$root-header}__logo
+  +span-columns(6)
+  @extend %clearfix
+  background: image-url('logo-white.svg') no-repeat
+  background-size: auto $logo-height
+  height: $logo-height
+  margin-top: $logo-spacing
+
+.#{$root-header}__logo a
+  &:link, &:visited, &:active
+    color: rgba(#fff, 0.75)
+  &:hover
+    color: #fff
+
+
+.logo__name
+  float: left
+  height: $logo-height
+  width: $logo-width
+  border: 2px solid white
+  text-align: center
+  font-size: 26px
+  padding: 4px
+
+.logo__slogan
+  display: inline-block
+  float: left
+  font-size: 1rem
+  font-weight: $font-light
+  height: $logo-height
+  padding-top: 15px
+  color: #fff
+
+.#{$root-header}__nav
+  +span-columns(6)
+  +align-middle($root-header-height)
+  text-align: right
+  li
+    display: inline-block
+    margin-left: 1rem
+

@@ -1,6 +1,14 @@
-p kevin.break_ice! # =>
+section.intro
+  .container
+    .row
+      p.ice-break kevin.break_ice! <span class="code-comment"># =></span>
 
-p = t("intro.greeting")
+    .row
+      .span-1
+      .span-10
+        p.greeting = t("intro.greeting")
 
-p = t("intro.blurb")
+        p.blurb
+          | I'm a software developer, gamer, speaker, blogger and open source contributor.
+            I work at #{link_to "platform45", "http://platform45.com"}, developing gorgeous web applications with the best web developers in South Africa.
 

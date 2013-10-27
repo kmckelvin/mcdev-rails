@@ -1,0 +1,47 @@
+.intro
+  background-color: #295C8F
+  color: rgba(#fff, 0.75)
+  padding-bottom: 2em
+
+  .ice-break
+    margin-top: 2rem
+    font-family: Menlo, sans-serif
+    font-size: 1.2rem
+    margin-bottom: 0
+
+  .greeting
+    font-size: 2.2rem
+    font-family: Georgia, serif
+    color: #fff
+
+  .blurb
+    a
+      font-weight: 600
+      color: #ffd
+      &:visited
+        color: #ffd
+
+.blog
+  background-color: #BA4C3C
+  color: #fff
+  padding-bottom: 2em
+
+  .post
+    +span-columns(6)
+    h4
+      margin-bottom: 0
+
+  .post__date
+    padding-left: 20px
+    font-family: $base-serif-font
+    font-style: italic
+
+  .post__content
+    padding-right: 10px
+    text-align: justify
+
+  .post__read-more
+    color: rgba(#fff, 0.75)
+    &:visited
+      color: rgba(#fff, 0.75)
+    font-style: italic

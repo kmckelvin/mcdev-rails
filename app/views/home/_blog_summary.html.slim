@@ -1,8 +1,14 @@
-#blog
-  h3 = t("blog.title")
+section.blog
+  a.anchor#blog Blog
+  .container
+    h3 = t("blog.title")
 
-  ul#posts
-    li = "Post"
-    li = "Post"
-    li = "Post"
-    li = "Post"
+    - %w(vim Ruby Clojure BEM Battlefield).in_groups_of(2, false).each do |group|
+      .row
+        - group.each do |topic|
+          .post
+            h4 Post about #{topic}
+            time.post__date datetime="2013-10-10" 10 Oct 2013
+            .post__content
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula. Pellentesque aliquam quam vel dolor. Nunc adipiscing.
+              a.post__read-more href="#" Read more...

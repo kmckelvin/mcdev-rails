@@ -1,0 +1,105 @@
+body
+  background: image-url('body-bg.png')
+  color: $color-main
+  &.home-landing_page
+    &:after
+      background: $color-main
+      box-shadow: 0 1px 3px 0 rgba(#000, 0.25)
+      content: ''
+      height: 10px
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+
+.upcoming-events
+  @extend %well
+
+.members
+  @extend %well
+
+article.manual
+  padding-top: 2rem
+  h2
+    border-bottom: 1px solid $color-main
+    padding-bottom: 1rem
+    margin-bottom: 2rem
+
+.main-header__nav
+  @extend %clearfix
+  ul
+    position: absolute
+    right: 0
+    top: 25px
+    li
+      +vertical-height(35px)
+      float: left
+      font-size: 1rem
+      margin: 0
+      padding: 0 1rem
+
+  .nav__yo
+    em
+      color: $color-highlight
+      font-size: 1.2rem
+      font-weight: 700
+      font-style: normal
+  .nav__avatar
+    img
+      +size(30px)
+      border-radius: 50%
+      display: block
+
+.data-list
+  +reset-list
+  li
+    +transition(0.15s)
+    border-bottom: 1px solid $color-ui-light
+    text-align: left
+    a
+      color: $color-highlight
+      display: block
+      padding: 0.5rem 1rem
+    &:hover
+      background-color: $color-ui-lighter
+  &.no-hover
+    li
+      padding: 0.5rem 1rem
+      &:hover
+        background-color: transparent
+
+
+footer
+  background: $color-main
+  padding-bottom: 13px
+  border-top: #fff 8px solid
+  height: 140px
+  margin-top: 5rem
+  a.logo-p45
+    +span-columns(6)
+    img
+      float: right
+      padding-top: 20px
+
+.featured-event__header-image
+  @extend %profile__header-image
+  background: red
+
+.map-killer
+  // background: red
+  position: absolute
+  width: 100%
+  height: 350px
+  z-index: 1000
+
+.member-list
+  @extend %clearfix
+  +reset-list
+  li
+    float: left
+    margin: 0.5rem
+    figure
+      border-radius: 50%
+      img
+        border-radius: 50%
+        +size(60px)

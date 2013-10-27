@@ -9,5 +9,7 @@ html
   body
     = render 'flashes'
     = render 'heading'
-    = yield
+    .main
+      = yield
+    = render 'footer'
     = render 'javascript'

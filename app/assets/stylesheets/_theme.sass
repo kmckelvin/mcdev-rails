@@ -1,0 +1,22 @@
+.#{$root-header}
+  background: $color-main
+  box-shadow: 0 1px 3px 0 rgba(#000, 0.25)
+  color: #FFF
+  position: fixed
+  top: 0
+  width: 100%
+
+.#{$root-header}__nav
+  a
+    color: rgba(#FFF, 0.75)
+    font-size: 1.125rem
+    &:hover
+      color: #FFF
+
+.#{$main-container}
+  padding-top: $root-header-height
+
+a.anchor
+  font-size: 0
+  @extend %hide-text
+  padding-top: $root-header-height

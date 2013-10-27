@@ -1,0 +1,23 @@
+%container
+  +outer-container
+  position: relative
+
+%row
+  +row
+
+// Grid
+@for $x from 1 to $grid-columns
+  %span-#{$x}
+    +span-columns($x)
+    min-height: 1px
+    position: relative
+
+.container
+  @extend %container
+
+.row
+  @extend %row
+
+@for $x from 1 to $grid-columns
+  .span-#{$x}
+    @extend %span-#{$x}
