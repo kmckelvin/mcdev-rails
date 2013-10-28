@@ -1,7 +1,25 @@
-footer#main-footer
-  .about
-    p = simple_format t("about")
+footer.main-footer
+  .container
+    .span-6
+      .about
+        a.anchor#about About
+        h3 About
 
-  .contact
-    .twitter = link_to "t", "http://twitter.com/kmckelvin"
-    .github = link_to "g", "https://github.com/kmckelvin"
+        .blurb Lorem ipsum dolor sit amet
+
+    .span-6
+      .contact
+        a.anchor#contact Contact
+        h3 Contact
+
+        .contact
+          .twitter
+            = link_to "https://twitter.com/kmckelvin" do
+              i.icon.icon-twitter
+              span.username @kmckelvin
+          .github
+            = link_to "https://github.com/kmckelvin" do
+              i.icon.icon-github
+              span.username github
+
+

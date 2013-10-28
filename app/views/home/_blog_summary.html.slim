@@ -1,7 +1,14 @@
 section.blog
   a.anchor#blog Blog
   .container
-    h3 = t("blog.title")
+    h3
+      .blog__heading--title = t("blog.title")
+      .blog__heading--links
+        = link_to "[Archives]", "#"
+
+    p I enjoy sharing knowledge through my writing. Often it's about software and development.
+      Sometimes it's about gaming. Other times it's just my opinion on things. Here are some of my most
+      recent items:
 
     - %w(vim Ruby Clojure BEM Battlefield).in_groups_of(2, false).each do |group|
       .row

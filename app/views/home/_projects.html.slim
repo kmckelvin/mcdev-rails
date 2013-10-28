@@ -3,7 +3,15 @@ section.projects
   .container
     h3 Projects
 
-    ul
-      li EFHooks
-      li McDev
-      li ?
+    p I tend to tinker with code pretty regularly. A lot of my code is open source and available on Github.
+      Here's the highlights reel:
+
+    - %w(EFHooks McDev NH3).in_groups_of(2, false).each do |group|
+      .row
+        - group.each do |project|
+          .span-6
+            h4
+              .project__name = project
+              .project__language
+                | (C#)
+            p.project__description Lorem ipsum

@@ -1,20 +1,43 @@
 .#{$root-header}
   background: $color-main
   box-shadow: 0 1px 3px 0 rgba(#000, 0.25)
-  color: #FFF
+  color: $color-main-text
   position: fixed
   top: 0
   width: 100%
 
 .#{$root-header}__nav
   a
-    color: rgba(#FFF, 0.75)
+    color: rgba($color-main-text, 0.75)
     font-size: 1.125rem
     &:hover
-      color: #FFF
+      color: $color-main-text
+      border-bottom: 2px solid #d00
+      padding-bottom: 5px
 
 .#{$main-container}
   padding-top: $root-header-height
+
+%contact-icons
+  color: $color-main-text
+
+.#{$root-footer}
+  background: $color-main
+  border-top: $color-main 1px solid
+  height: 240px
+  color: $color-main-text
+
+  h3
+    margin-bottom: 0.5rem
+
+  .contact
+    i.icon
+      min-width: 30px
+      display: inline-block
+    a
+      @extend %contact-icons
+      &:visited
+        @extend %contact-icons
 
 a.anchor
   font-size: 0

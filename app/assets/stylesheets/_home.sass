@@ -1,6 +1,6 @@
 .intro
   background-color: #295C8F
-  color: rgba(#fff, 0.75)
+  color: rgba($color-main-text, 0.75)
   padding-bottom: 2em
 
   .ice-break
@@ -10,11 +10,12 @@
     margin-bottom: 0
 
   .greeting
-    font-size: 2.2rem
+    font-size: 3.4rem
     font-family: Georgia, serif
-    color: #fff
+    color: $color-main-text
 
   .blurb
+    font-size: 1.5rem
     a
       font-weight: 600
       color: #ffd
@@ -23,7 +24,7 @@
 
 .blog
   background-color: #BA4C3C
-  color: #fff
+  color: $color-main-text
   padding-bottom: 2em
 
   .post
@@ -41,7 +42,39 @@
     text-align: justify
 
   .post__read-more
-    color: rgba(#fff, 0.75)
+    color: rgba($color-main-text, 0.75)
     &:visited
-      color: rgba(#fff, 0.75)
+      color: rgba($color-main-text, 0.75)
     font-style: italic
+
+.blog__heading--title
+  display: inline
+
+.blog__heading--links
+  display: inline
+  font-size: 1rem
+  margin-left: 1em
+  a
+    &:visited
+      color: $color-main-text
+    &:hover
+      color: #ffd
+
+.projects
+  background-color: #446
+  color: rgba($color-main-text, 0.85)
+
+  h4
+    margin-bottom: 0
+
+  .project__name
+    display: inline
+
+  .project__language
+    &:before
+      content: ' '
+    display: inline
+
+.speaking
+  background-color: #9ACBD9
+  color: rgba($color-alt-text, 0.7)
