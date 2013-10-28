@@ -3,6 +3,7 @@ source 'https://bundler-api.herokuapp.com'
 ruby '2.1.0'
 
 gem 'airbrake'
+gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bourbon'
 gem 'coffee-rails'
 gem 'delayed_job_active_record', '>= 4.0.0'
