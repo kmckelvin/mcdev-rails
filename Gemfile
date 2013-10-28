@@ -1,6 +1,6 @@
-source 'https://rubygems.org'
+source 'https://bundler-api.herokuapp.com'
 
-ruby '2.0.0'
+ruby '2.1.0'
 
 gem 'airbrake'
 gem 'bourbon'
@@ -13,14 +13,15 @@ gem 'high_voltage'
 gem 'jquery-rails'
 gem 'neat'
 gem 'pg'
+gem 'puma'
 gem 'rack-timeout'
 gem 'rails', '>= 4.0.0'
 gem 'recipient_interceptor'
+gem 'rubysl'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'slim-rails', '>= 2.0'
 gem 'uglifier'
-gem 'unicorn'
 
 group :development do
   gem 'better_errors'
