@@ -104,6 +104,7 @@ GEM
       thor (>= 0.13.6)
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
+    github-markdown (0.6.1)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -167,6 +168,7 @@ GEM
       polyamorous (~> 0.6.0)
     recipient_interceptor (0.1.2)
       mail
+    redcarpet (3.0.0)
     responders (1.0.0)
       railties (>= 3.2, < 5)
     rspec-core (2.14.6)
@@ -460,6 +462,7 @@ DEPENDENCIES
   flutie
   font-awesome-rails
   foreman
+  github-markdown
   high_voltage
   jquery-rails
   launchy
@@ -470,6 +473,7 @@ DEPENDENCIES
   rack-timeout
   rails (>= 4.0.0)
   recipient_interceptor
+  redcarpet
   rspec-rails (>= 2.14)
   rubysl
   sass-rails
