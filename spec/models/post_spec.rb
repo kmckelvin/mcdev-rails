@@ -28,4 +28,13 @@ describe Post do
       }.to change { post.processed_body }
     end
   end
+
+  describe "#slug" do
+    it "is created from the title after save" do
+      post = build(:post, title: "Lazy Enumeration in Ruby 1.9")
+      expect {
+        post.save
+      }.to change { post.slug }.to "lazy-enumeration-in-ruby-1-dot-9"
+    end
+  end
 end
