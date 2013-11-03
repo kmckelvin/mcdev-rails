@@ -1,6 +1,6 @@
-source 'https://bundler-api.herokuapp.com'
+source 'https://rubygems.org'
 
-ruby '2.1.0'
+ruby '2.0.0'
 
 gem 'airbrake'
 gem 'activeadmin', github: 'gregbell/active_admin'
@@ -20,7 +20,6 @@ gem 'rack-timeout'
 gem 'rails', '>= 4.0.0'
 gem 'recipient_interceptor'
 gem 'redcarpet'
-gem 'rubysl'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'slim-rails', '>= 2.0'
@@ -41,7 +40,6 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'shoulda-matchers'
-  gem 'simplecov', require: false
   gem 'timecop'
   gem 'webmock'
 end

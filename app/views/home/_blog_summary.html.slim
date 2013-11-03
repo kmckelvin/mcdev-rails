@@ -17,5 +17,4 @@ section.blog
             h4 = post.title
             time.post__date datetime="2013-10-10" = post.published_at.strftime("%d %b %Y")
             .post__content = post.teaser
-            - if post.longer_than_teaser?
-              a.post__read-more href="#" Read more...
+            a.post__read-more href="#" Read more...
