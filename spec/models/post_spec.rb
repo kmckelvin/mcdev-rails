@@ -7,6 +7,7 @@ describe Post do
         visible_post = create(:post, :published)
         create(:post) # invisible post
 
+        expect(visible_post.slug).not_to be_blank
         expect(Post.published.to_a).to eq [visible_post]
       end
     end
@@ -35,6 +36,13 @@ describe Post do
       expect {
         post.save
       }.to change { post.slug }.to "lazy-enumeration-in-ruby-1-dot-9"
+    end
+  end
+
+  describe "#path_params" do
+    it "returns the year, month and slug" do
+      post = build(:post, :published)
+      expect(post.path_params).to eq(year: "2013", month: "08", slug: post.slug)
     end
   end
 end
