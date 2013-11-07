@@ -15,7 +15,7 @@ describe BlogController do
     describe "with a valid post" do
       it "shows the post" do
         post = create_post
-        get :show, slug: post.slug, year: '2013', month: '07'
+        get :show, post.path_params
 
         expect(assigns[:post]).to eq post
       end
