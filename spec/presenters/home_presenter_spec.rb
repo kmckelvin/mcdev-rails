@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe HomePresenter do
-  let(:blog_post) { stub }
-  let(:project) { stub }
+  let(:blog_post) { double }
+  let(:project) { double }
 
   let(:presenter) { HomePresenter.new([blog_post], [project]) }
 
