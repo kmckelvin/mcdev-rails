@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature "Browsing the home page" do
-  let!(:blog_post) { create(:post, :published) }
+  given!(:blog_post) { create(:post, :published) }
 
   scenario "Viewing the root content" do
     visit root_url
@@ -13,5 +13,19 @@ feature "Browsing the home page" do
     expected_content = blog_post.teaser
     expect(expected_content.length).to be > 1
     expect(page).to have_content expected_content
+  end
+
+  context "projects" do
+    given!(:project) { create(:project) }
+
+    scenario "Viewing the list of projects" do
+      visit root_url
+      expect(page).to have_content project.title
+      expect(page).to have_content project.language
+      expect(page).to have_content project.description
+
+      click_on project.title
+      expect(current_url).to eq project.github_url
+    end
   end
 end

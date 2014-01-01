@@ -1,9 +1,8 @@
 class HomePresenter
-  def initialize(posts)
+  def initialize(posts, projects)
     @posts = posts
+    @projects = projects
   end
 
-  def posts
-    @posts
-  end
+  attr_reader :posts, :projects
 end

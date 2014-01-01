@@ -7,12 +7,11 @@ section.projects
       #{link_to "Github", "https://github.com/kmckelvin"}.
       Here's the highlights reel:
 
-    - %w(EFHooks McDev NH3).each_slice(2).each do |group|
+    - @presenter.projects.each_slice(2).each do |group|
       .row
         - group.each do |project|
           .span-6
             h4
-              .project__name = project
-              .project__language
-                | (C#)
-            p.project__description Lorem ipsum
+              .project__name = link_to project.title, project.github_url
+              .project__language = project.language
+            p.project__description = project.description

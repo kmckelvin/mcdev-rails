@@ -2,7 +2,8 @@ class HomeController < ApplicationController
 
   def index
     posts = Post.published.recent(8)
-    @presenter = HomePresenter.new(posts)
+    projects = Project.unscoped
+    @presenter = HomePresenter.new(posts, projects)
   end
 
 end
