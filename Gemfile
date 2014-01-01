@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://gems.cloudafrica.net'
 
 ruby '2.0.0'
 
@@ -29,10 +29,12 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'foreman'
+  gem 'quiet_assets'
 end
 
 group :development, :test do
   gem 'factory_girl_rails'
+  gem 'poltergeist'
   gem 'rspec-rails', '>= 2.14'
 end
 

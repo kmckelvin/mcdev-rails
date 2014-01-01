@@ -24,7 +24,7 @@
 .#{$root-footer}
   background: $color-main
   border-top: $color-main 1px solid
-  height: 240px
+  height: $root-footer-height
   color: $color-main-text
 
   h3
@@ -43,3 +43,5 @@ a.anchor
   font-size: 0
   @extend %hide-text
   padding-top: $root-header-height
+
+@include sticky-footer($root-footer-height)

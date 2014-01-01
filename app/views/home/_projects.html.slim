@@ -3,10 +3,11 @@ section.projects
   .container
     h3 Projects
 
-    p I tend to tinker with code pretty regularly. A lot of my code is open source and available on Github.
+    p I tend to tinker with code pretty regularly. A lot of my code is open source and available on
+      #{link_to "Github", "https://github.com/kmckelvin"}.
       Here's the highlights reel:
 
-    - %w(EFHooks McDev NH3).in_groups_of(2, false).each do |group|
+    - %w(EFHooks McDev NH3).each_slice(2).each do |group|
       .row
         - group.each do |project|
           .span-6

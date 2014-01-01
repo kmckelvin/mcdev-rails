@@ -5,8 +5,8 @@ header.main-header
         .logo__name McDev
     nav.main-header__nav
       ul
-        li: a href="#" Home
-        li: a href="#blog" Blog
-        li: a href="#projects" Projects
-        li: a href="#speaking" Speaking
-        li: a href="#contact" Contact
+        li = link_to "Home", root_path + "#"
+        li = link_to "Blog", root_path + "#blog"
+        li = link_to "Projects", root_path + "#projects"
+        li = link_to "Speaking", root_path + "#speaking"
+        li = link_to "Contact", root_path + "#contact"

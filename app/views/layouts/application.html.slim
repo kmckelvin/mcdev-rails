@@ -6,10 +6,11 @@ html
     = stylesheet_link_tag :application, media: 'all'
     = csrf_meta_tags
 
-  body
+  body class="#{body_class}"
     = render 'flashes'
     = render 'heading'
     .main
       = yield
+      .push-footer
     = render 'footer'
     = render 'javascript'
