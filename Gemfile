@@ -2,8 +2,8 @@ source 'https://gems.cloudafrica.net'
 
 ruby '2.0.0'
 
-gem 'airbrake'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'airbrake'
 gem 'bourbon'
 gem 'coffee-rails'
 gem 'delayed_job_active_record', '>= 4.0.0'
@@ -23,6 +23,7 @@ gem 'redcarpet'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'slim-rails', '>= 2.0'
+gem 'turbolinks'
 gem 'uglifier'
 
 group :development do

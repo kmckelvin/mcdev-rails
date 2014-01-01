@@ -233,6 +233,8 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    turbolinks (2.1.0)
+      coffee-rails
     tzinfo (0.3.38)
     uglifier (2.3.0)
       execjs (>= 0.3.0)
@@ -283,5 +285,6 @@ DEPENDENCIES
   simple_form
   slim-rails (>= 2.0)
   timecop
+  turbolinks
   uglifier
   webmock

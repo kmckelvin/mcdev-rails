@@ -3,7 +3,7 @@ html
   head
     meta charset="utf-8"
     title = page_title app_name: t("name")
-    = stylesheet_link_tag :application, media: 'all'
+    = stylesheet_link_tag :application, media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
   body class="#{body_class}"
