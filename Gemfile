@@ -15,7 +15,6 @@ gem 'high_voltage'
 gem 'jquery-rails'
 gem 'neat'
 gem 'pg'
-gem 'puma'
 gem 'pygments.rb'
 gem 'rack-timeout'
 gem 'rails', '>= 4.0.0'
@@ -50,4 +49,5 @@ end
 
 group :staging, :production do
   gem 'newrelic_rpm', '>= 3.6.7'
+  gem 'unicorn'
 end
