@@ -5,5 +5,6 @@ Mcdev::Application.routes.draw do
 
   scope "/blog" do
     get "/:year/:month/:slug" => "blog#show", as: 'blog'
+    get "/" => "blog#index", as: 'blogs'
   end
 end

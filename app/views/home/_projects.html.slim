@@ -13,5 +13,6 @@ section.projects
           .span-6
             h4
               .project__name = link_to project.title, project.github_url
-              .project__language = project.language
+              .project__language
+                | (#{project.language})
             p.project__description = project.description

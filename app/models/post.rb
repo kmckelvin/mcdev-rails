@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
 
   scope :published, -> { where(published: true).where.not(published_at: nil, slug: nil) }
   scope :recent, ->(limit) { order("#{table_name}.published_at desc, #{table_name}.created_at desc").limit(limit) }
+  scope :by_publication_date, -> { published.order(published_at: :desc) }
 
   def path_params
     {
@@ -15,11 +16,29 @@ class Post < ActiveRecord::Base
 
   private
   def compile_markdown
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
+    renderer = HTMLwithPygments.new(hard_wrap: true, filter_html: true)
+    options = {
+      autolink: true,
+      no_intra_emphasis: true,
+      fenced_code_blocks: true,
+      lax_html_blocks: true,
+      strikethrough: true,
+      superscript: true
+    }
+    markdown = Redcarpet::Markdown.new(renderer, options)
     self.processed_body = markdown.render(body)
   end
 
   def generate_slug
     self.slug = SlugGenerator.new.generate(title)
+  end
+
+  class HTMLwithPygments < Redcarpet::Render::HTML
+    def block_code(code, language)
+      sha = Digest::SHA1.hexdigest(code)
+      Rails.cache.fetch ["code", language, sha].join('-') do
+        Pygments.highlight(code, lexer: language)
+      end
+    end
   end
 end

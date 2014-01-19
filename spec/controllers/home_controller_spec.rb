@@ -22,5 +22,17 @@ describe HomeController do
         expect(assigns(:presenter).projects).to eq [project]
       end
     end
+
+    context "with presentations" do
+      let!(:presentation) { create(:presentation, :future) }
+      let!(:past_presentation) { create(:presentation, :past) }
+
+      it "assigns the upcoming presentation" do
+        get :index
+
+        expect(assigns(:presenter).upcoming_presentations).to eq [presentation]
+        expect(assigns(:presenter).past_presentations).to eq [past_presentation]
+      end
+    end
   end
 end

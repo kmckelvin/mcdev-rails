@@ -28,6 +28,19 @@ describe Post do
         post.save
       }.to change { post.processed_body }
     end
+
+    it "highlights code blocks in markdown" do
+      post = build(:post)
+
+      post.body = <<EOS
+``` ruby
+puts "Hello World"
+```
+EOS
+
+      post.save
+      expect(post.processed_body).to include '<span class="s2">'
+    end
   end
 
   describe "#slug" do

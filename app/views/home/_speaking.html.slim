@@ -4,14 +4,10 @@ section.speaking
     h3 Speaking
 
     h4 Upcoming
-    ul
-      li Rubyfuza 2014
-      li RubyOnBeer ?
+    ul.upcoming
+      = render @presenter.upcoming_presentations
 
     h4 Past
-
-    ul
-      li Rubyfuza RSpec
-      li JSinSA RG
-      li RubyOnBeer Inheritance and Polymorphism
+    ul.past
+      = render @presenter.past_presentations
 
