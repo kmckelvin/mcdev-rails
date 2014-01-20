@@ -6,7 +6,7 @@
       = link_to post.title, blog_path(post.path_params), class: "post__title"
       - if post.teaser.present?
         .post__teaser
-          = post.teaser
+          = simple_format post.teaser
           '
           = link_to ">> Read more", blog_path(post.path_params)
 
