@@ -282,6 +282,7 @@ DEPENDENCIES
   github-markdown
   high_voltage
   jquery-rails
+  kaminari
   launchy
   neat
   newrelic_rpm (>= 3.6.7)

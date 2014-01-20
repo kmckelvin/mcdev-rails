@@ -1,6 +1,6 @@
 class BlogController < ApplicationController
   def index
-    @posts = Post.by_publication_date
+    @posts = Post.by_publication_date.page(params[:page]).per(10)
   end
 
   def show
