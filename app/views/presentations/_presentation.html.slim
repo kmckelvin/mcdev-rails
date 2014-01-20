@@ -1,4 +1,10 @@
-li
-  = presentation.title
-  = link_to presentation.video_url, presentation.video_url, class: "presentation__video"
-  = link_to presentation.slides_url, presentation.slides_url, class: "presentation__slides"
+div.presentation
+  - if presentation.video_url
+    = link_to presentation.video_url, class: "presentation__video", title: "Video" do
+      i.fa.fa-youtube-play
+
+  -if presentation.slides_url
+    = link_to presentation.slides_url, class: "presentation__slides", title: "Slides" do
+      i.fa.fa-align-justify
+
+  span.presentation__title #{presentation.title} - #{presentation.event} (#{presentation.presented_on.strftime("%e %b %Y").strip})
