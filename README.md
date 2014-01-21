@@ -1,9 +1,4 @@
-You look great in Suspenders
-============================
+## McDev
 
-Use the following guides for getting things done, programming well, and
-programming in style.
+The Rails code that runs my online presence at http://kmckelvin.com
 
-* [Protocol](http://github.com/thoughtbot/guides/blob/master/protocol)
-* [Best Practices](http://github.com/thoughtbot/guides/blob/master/best-practices)
-* [Style](http://github.com/thoughtbot/guides/blob/master/style)
