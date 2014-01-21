@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe HomeController do
-  render_views
   describe "GET index" do
     context "with unpublished posts" do
       let!(:blog_post) { create(:post, :published) }

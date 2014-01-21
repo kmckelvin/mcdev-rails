@@ -1,12 +1,6 @@
 require 'spec_helper'
 
 describe BlogController do
-  # slugs
-  # /blog/2013/07/clojure-post => show
-  # /blog/2013/07 => index
-  # /blog/2013 => index
-  # /blog => index
-  #
   def create_post
     create(:post, :published)
   end
