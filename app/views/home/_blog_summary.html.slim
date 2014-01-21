@@ -10,7 +10,7 @@ section.blog
       Sometimes it's about gaming. Other times it's just my opinion on things. Here are some of my most
       recent entries:
 
-    - @presenter.posts.in_groups_of(2, false) do |group|
+    - @presenter.posts.each_slice(2) do |group|
       .row
         - group.each do |post|
           .post
