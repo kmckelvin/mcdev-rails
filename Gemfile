@@ -2,6 +2,9 @@ source 'https://gems.cloudafrica.net'
 
 ruby '2.0.0'
 
+# keep this first
+gem 'dotenv-rails', group: [:development, :test]
+
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'airbrake'
 gem 'bourbon'
