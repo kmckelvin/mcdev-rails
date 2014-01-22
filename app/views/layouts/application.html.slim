@@ -5,6 +5,7 @@ html
     title = page_title app_name: t("name")
     = stylesheet_link_tag :application, media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    = render 'google_analytics'
 
   body class="#{body_class}"
     = render 'flashes'
