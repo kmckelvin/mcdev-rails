@@ -13,7 +13,7 @@ FactoryGirl.define do
     end
 
     trait :past do
-      presented_on 1.day.ago
+      presented_on 1.week.ago
     end
   end
 end
