@@ -29,6 +29,7 @@ gem 'simple_form'
 gem 'slim-rails', '>= 2.0'
 gem 'turbolinks'
 gem 'uglifier'
+gem 'unicorn'
 
 group :development do
   gem 'better_errors'
@@ -54,5 +55,4 @@ end
 group :staging, :production do
   gem 'newrelic_rpm', '>= 3.6.7'
   gem 'rails_12factor'
-  gem 'unicorn'
 end
