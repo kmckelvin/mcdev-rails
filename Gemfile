@@ -1,6 +1,6 @@
 source 'https://gems.cloudafrica.net'
 
-ruby '2.0.0'
+ruby '2.1.0'
 
 # keep this first
 gem 'dotenv-rails', group: [:development, :test]
