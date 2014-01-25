@@ -2,7 +2,7 @@ doctype 5
 html
   head
     meta charset="utf-8"
-    title = page_title app_name: t("name")
+    title = page_title app_name: t("name"), separator: ' | '
     = stylesheet_link_tag :application, media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = render 'google_analytics'
