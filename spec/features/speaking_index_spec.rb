@@ -7,7 +7,6 @@ feature "Browing the speaking index" do
     visit root_url
 
     within "section.speaking" do
-      expect(find(".past").text).to be_empty
       within ".upcoming" do
         expect(page).to have_content presentation.title
         find(".presentation__video").click
