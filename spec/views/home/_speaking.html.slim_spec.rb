@@ -21,8 +21,23 @@ describe "home/_speaking.html.slim" do
     end
   end
 
-  context "when there are past presentations"
-  context "when there are no past presentations"
+  context "when there are past presentations" do
+    it "renders the past presentations" do
+      presentation = build(:presentation, :past)
+      presenter = HomePresenter.new([], [], [], [presentation])
+      assign(:presenter, presenter)
+      render
+      expect(rendered).to have_content "Past"
+      expect(rendered).to have_content presentation.title
+    end
+  end
 
-  context "when there are both past and upcoming presentations"
+  context "when there are no past presentations" do
+    it "doesn't render the past title" do
+      presenter = HomePresenter.new([], [], [], [])
+      assign(:presenter, presenter)
+      render
+      expect(rendered).not_to have_content "Past"
+    end
+  end
 end

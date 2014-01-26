@@ -8,7 +8,8 @@ section.speaking
       div.upcoming
         = render @presenter.upcoming_presentations
 
-    h4 Past
-    div.past
-      = render @presenter.past_presentations
+    - if @presenter.past_presentations.any?
+      h4 Past
+      div.past
+        = render @presenter.past_presentations
 
