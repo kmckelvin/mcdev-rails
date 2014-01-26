@@ -3,9 +3,10 @@ section.speaking
   .container
     h3 Speaking
 
-    h4 Upcoming
-    div.upcoming
-      = render @presenter.upcoming_presentations
+    - if @presenter.upcoming_presentations.any?
+      h4 Upcoming
+      div.upcoming
+        = render @presenter.upcoming_presentations
 
     h4 Past
     div.past
