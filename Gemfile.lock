@@ -17,7 +17,7 @@ GIT
       sass-rails
 
 GEM
-  remote: https://gems.cloudafrica.net/
+  remote: https://rubygems.org/
   specs:
     actionmailer (4.0.2)
       actionpack (= 4.0.2)

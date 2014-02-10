@@ -1,4 +1,4 @@
-source 'https://gems.cloudafrica.net'
+source 'https://rubygems.org'
 
 ruby '2.1.0'
 
