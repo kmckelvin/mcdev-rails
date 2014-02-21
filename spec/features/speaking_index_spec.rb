@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "Browing the speaking index" do
+feature "Browsing the speaking index" do
   it "lists upcoming presentations" do
     presentation = create(:presentation, :future)
 

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "Browing the blog index" do
+feature "Browsing the blog index" do
   it "doesn't list unpublished posts" do
     blog_post = create(:post)
     visit blogs_url
