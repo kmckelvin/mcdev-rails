@@ -2,6 +2,6 @@
 .container
   .row
     .span-9.blog_post
-      time datetime="2013-10-10" = @post.published_at.strftime("%e %b %Y")
+      time datetime="#{@post.published_at.strftime("%Y-%m-%d")}" = @post.published_at.strftime("%e %b %Y")
       h1.post__title = @post.title
       .post__body == @post.processed_body
