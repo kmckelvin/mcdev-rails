@@ -19,6 +19,13 @@ describe "home/_speaking.html.slim" do
       render
       expect(rendered).not_to have_content "Upcoming"
     end
+
+    it "renders the 'no upcoming presentations' text" do
+      presenter = HomePresenter.new([], [], [], [])
+      assign(:presenter, presenter)
+      render
+      expect(rendered).to have_content "I have no upcoming speaking engagements."
+    end
   end
 
   context "when there are past presentations" do

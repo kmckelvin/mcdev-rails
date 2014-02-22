@@ -4,12 +4,14 @@ section.speaking
     h3 Speaking
 
     - if @presenter.upcoming_presentations.any?
-      h4 Upcoming
+      h5 Upcoming Presentations
       .upcoming
         = render @presenter.upcoming_presentations
+    - else
+      p I have no upcoming speaking engagements.
 
     - if @presenter.past_presentations.any?
-      h4 Past
+      h5 Past Presentations
       .past
         = render @presenter.past_presentations
 
