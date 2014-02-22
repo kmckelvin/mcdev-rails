@@ -3,7 +3,7 @@ div.presentation
     = link_to presentation.video_url, class: "presentation__video", title: "Video" do
       i.fa.fa-youtube-play
 
-  -if presentation.slides_url.present?
+  - if presentation.slides_url.present?
     = link_to presentation.slides_url, class: "presentation__slides", title: "Slides" do
       i.fa.fa-align-justify
 
