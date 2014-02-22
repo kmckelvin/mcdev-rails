@@ -5,11 +5,11 @@ section.speaking
 
     - if @presenter.upcoming_presentations.any?
       h4 Upcoming
-      div.upcoming
+      .upcoming
         = render @presenter.upcoming_presentations
 
     - if @presenter.past_presentations.any?
       h4 Past
-      div.past
+      .past
         = render @presenter.past_presentations
 
