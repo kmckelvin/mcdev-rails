@@ -6,5 +6,9 @@ class HomePresenter
     @past_presentations = past_presentations
   end
 
-  attr_reader :posts, :projects, :upcoming_presentations, :past_presentations
+  attr_reader :projects, :upcoming_presentations, :past_presentations
+
+  def posts
+    @_post_presenters ||= @posts.map { |p| PostPresenter.new(p) }
+  end
 end

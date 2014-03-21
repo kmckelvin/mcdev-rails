@@ -15,7 +15,7 @@ section.blog
         - group.each do |post|
           .post
             h4 = link_to post.title, blog_path(post.path_params)
-            time.post__date datetime="#{post.published_at.strftime("%Y-%m-%d")}"
-              = post.published_at.strftime("%d %b %Y")
+            time.post__date datetime="#{post.published_at_iso8601}"
+              = post.published_at
             .post__content = post.teaser
             = link_to "Read more...", blog_path(post.path_params), class: "post__read-more"

@@ -11,6 +11,7 @@ describe HomePresenter do
   describe "#posts" do
     it "returns the posts" do
       expect(presenter.posts).to eq [blog_post]
+      expect(presenter.posts.map(&:class)).to eq [PostPresenter]
     end
   end
 
