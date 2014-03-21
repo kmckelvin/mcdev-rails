@@ -30,16 +30,13 @@ describe Post do
     end
 
     it "highlights code blocks in markdown" do
-      post = build(:post)
+      post = build(:post, body: 'POST BODY')
 
-      post.body = <<EOS
-``` ruby
-puts "Hello World"
-```
-EOS
-
+      expect_any_instance_of(MarkdownWithPygmentsCompiler).
+        to receive(:compile).with(post.body).and_return('RESULT BODY')
       post.save
-      expect(post.processed_body).to include '<span class="s2">'
+
+      expect(post.processed_body).to eq 'RESULT BODY'
     end
   end
 
