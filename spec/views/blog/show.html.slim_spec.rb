@@ -4,7 +4,8 @@ describe "blog/show.html.slim" do
   context "with a published post" do
     it "sets the title" do
       blog_post = build(:post, :published)
-      assign(:post, blog_post)
+      presenter = PostPresenter.new(blog_post)
+      assign(:post, presenter)
 
       render
 
@@ -13,7 +14,8 @@ describe "blog/show.html.slim" do
 
     it "renders the post's processed_body" do
       blog_post = build(:post, :published, processed_body: "<h1>The body</h1>")
-      assign(:post, blog_post)
+      presenter = PostPresenter.new(blog_post)
+      assign(:post, presenter)
 
       render
 

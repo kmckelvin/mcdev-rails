@@ -4,7 +4,7 @@ class BlogController < ApplicationController
   end
 
   def show
-    @post = post
+    @post = PostPresenter.new(post)
   end
 
   private
