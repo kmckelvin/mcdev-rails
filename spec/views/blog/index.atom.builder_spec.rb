@@ -13,7 +13,7 @@ describe "blog/index.atom.builder" do
 
       render
 
-      expect(rendered).to have_link blog_post.title, href: blog_path(blog_post.path_params)
+      expect(rendered).to have_content blog_post.processed_body
     end
   end
 
@@ -24,7 +24,7 @@ describe "blog/index.atom.builder" do
 
       render
 
-      expect(rendered).to have_content "There are no posts to display."
+      expect(rendered).not_to have_content "updated"
     end
   end
 end
