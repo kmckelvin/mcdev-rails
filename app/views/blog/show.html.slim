@@ -1,7 +1,7 @@
 - content_for :page_title, @post.title
 .container
   .row
-    .span-9.blog_post
+    .blog_post
       time datetime="#{@post.published_at_iso8601}" = @post.published_at
       h1.post__title = @post.title
       .post__body == @post.processed_body

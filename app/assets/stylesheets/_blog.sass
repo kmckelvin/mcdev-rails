@@ -19,6 +19,7 @@
       margin-left: 130px
 
   .blog_post
+    +span-columns(9)
     margin-top: 1em
 
     .post__title
@@ -42,3 +43,8 @@
 
     h5
       font-size: 16px
+
+  +media($medium-screen)
+    .blog_post
+      +fill-parent
+      +omega
