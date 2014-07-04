@@ -7,9 +7,9 @@
   width: 100%
 
 .#{$root-header}__nav
+  font-size: 1.125rem
   a
     color: rgba($color-main-text, 0.75)
-    font-size: 1.125rem
     &:hover
       color: $color-main-text
       border-bottom: 2px solid #d00
@@ -45,3 +45,11 @@ a.anchor
   padding-top: $root-header-height
 
 @include sticky-footer($root-footer-height)
+
++media($medium-screen)
+  .#{$root-header}__nav
+    font-size: 0.8rem
+
++media($small-screen)
+  .#{$root-header}__nav
+    display: none

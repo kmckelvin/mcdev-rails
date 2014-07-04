@@ -8,7 +8,7 @@ $logo-spacing: ($root-header-height - $logo-height) / 2
   z-index: $header-zindex
 
 .#{$root-header}__logo
-  +span-columns(6)
+  +span-columns(2)
   @extend %clearfix
   background-size: auto $logo-height
   height: $logo-height
@@ -40,10 +40,9 @@ $logo-spacing: ($root-header-height - $logo-height) / 2
   color: #fff
 
 .#{$root-header}__nav
-  +span-columns(6)
+  +span-columns(9)
   +align-middle($root-header-height)
   text-align: right
   li
     display: inline-block
     margin-left: 1rem
-
