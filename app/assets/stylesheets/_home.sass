@@ -85,20 +85,30 @@
     padding-bottom: 2em
 
     .presentation
-      height: 2em
+      min-height: 2em
+
+    .presentation__links
+      display: inline-block
+      width: 70px
 
     .presentation__video
       margin-right: 10px
-
-    .presentation__title
-      position: absolute
-      left: 80px
 
     h5
       margin-bottom: 5px
 
 +media($medium-screen)
   .home
+    .intro
+      .ice-break
+        display: none
+
+      .greeting
+        font-size: 1.6rem
+
+      .blurb
+        font-size: 1rem
+
     .blog
       .post
         +fill-parent
