@@ -11,7 +11,7 @@ feed_options = {
 #   actionpack/lib/action_view/helpers/atom_feed_helper.rb#L96
 atom_feed feed_options do |feed|
   # set feed title
-  feed.title "McDev"
+  feed.title "Kevin McKelvin"
 
   # set feed updated date, setting published_at of the newest post
   if @posts.any?
