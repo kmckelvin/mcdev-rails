@@ -4,7 +4,15 @@ class Post < ActiveRecord::Base
 
   scope :published, -> { where(published: true).where.not(published_at: nil, slug: nil) }
   scope :recent, ->(limit) { order("#{table_name}.published_at desc, #{table_name}.created_at desc").limit(limit) }
-  scope :by_publication_date, -> { published.order(published_at: :desc) }
+  scope :by_publication_date, ->(direction = :desc) { published.order(published_at: direction) }
+
+  def older_post
+    self.class.published.by_publication_date.where("published_at < ?", published_at).limit(1).first
+  end
+
+  def newer_post
+    self.class.published.by_publication_date(:asc).where("published_at > ?", published_at).limit(1).first
+  end
 
   def path_params
     {

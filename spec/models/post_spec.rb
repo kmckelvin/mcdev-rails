@@ -55,4 +55,46 @@ describe Post do
       expect(post.path_params).to eq(year: "2013", month: "08", slug: post.slug)
     end
   end
+
+  describe "#older_post" do
+    context "when there are no older published posts" do
+      it "returns nil" do
+        post = create(:post, :published)
+        unpublished_post = create(:post, published: false, published_at: post.published_at - 1.day)
+        expect(post.older_post).to be_nil
+      end
+    end
+
+    context "when there are older published posts" do
+      it "returns the next chronological post" do
+        post = create(:post, :published)
+        published_post1 = create(:post, published: true, published_at: post.published_at - 1.day)
+        published_post2 = create(:post, published: true, published_at: post.published_at - 2.days)
+
+        expect(post.older_post).to eq published_post1
+        expect(published_post1.older_post).to eq published_post2
+      end
+    end
+  end
+
+  describe "#newer_post" do
+    context "when there are no newer published posts" do
+      it "returns nil" do
+        post = create(:post, :published)
+        unpublished_post = create(:post, published: false, published_at: post.published_at + 1.day)
+        expect(post.newer_post).to be_nil
+      end
+    end
+
+    context "when there are newer published posts" do
+      it "returns the previous chronological post" do
+        post = create(:post, :published)
+        published_post1 = create(:post, published: true, published_at: post.published_at + 1.day)
+        published_post2 = create(:post, published: true, published_at: post.published_at + 2.days)
+
+        expect(post.newer_post).to eq published_post1
+        expect(published_post1.newer_post).to eq published_post2
+      end
+    end
+  end
 end
