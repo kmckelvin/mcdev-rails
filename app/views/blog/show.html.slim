@@ -5,3 +5,4 @@
       time datetime="#{@post.published_at_iso8601}" = @post.published_at
       h1.post__title = @post.title
       .post__body == @post.processed_body
+      = render 'disqus'
